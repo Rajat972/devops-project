@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/<your-username>/devops-project.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t devops-demo .'
@@ -24,3 +18,4 @@ pipeline {
         }
     }
 }
+
